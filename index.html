@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Portfolio</title>
+
+    <script type="importmap">
+        {
+          "imports": {
+            "three": "https://unpkg.com/three@v0.158.0/build/three.module.js",
+            "three/addons/": "https://unpkg.com/three@v0.158.0/examples/jsm/"
+          }
+        }
+      </script>
+    
+      <script type="module" src="avatar.js"></script>
+</head>
+
+<body>
+    <div id="particles-js"></div>
+    <div class="cubes-container">
+        <div class="cube cube-1"></div>
+        <div class="cube cube-2"></div>
+        <div class="cube cube-3"></div>
+        <div class="cube cube-4"></div>
+        <div class="cube cube-5"></div>
+    </div>
+    <div class="container">
+        <header>
+            <div class="top-menu" id = "topmenu">
+                <ul>
+                    <li class="active" data-menu="about">
+                        <a href="#about">
+                            <i class="fas fa-user"></i>
+                            <span class="link">about</span>
+                        </a>
+                    </li>
+                    <li data-menu="resume">
+                        <a href="#resume">
+                            <i class="fas fa-file"></i>
+                            <span class="link">resume</span>
+                        </a>
+                    </li>
+                    <li data-menu="work">
+                        <a href="#work">
+                            <i class="fas fa-paint-brush"></i>
+                            <span class="link">work</span>
+                        </a>
+                    </li>
+                    <li data-menu="blog">
+                        <a href="#blog">
+                            <i class="fas fa-comment-dots"></i>
+                            <span class="link">blog</span>
+                        </a>
+                    </li>
+                    <li data-menu="contact">
+                        <a href="#contact">
+                            <i class="fas fa-at"></i>
+                            <span class="link">contact</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </header>
+        <div class="hero" id="hero">
+            <div class="avatar" id='avatar-container'>
+                <div id='avatar-loading'></div>
+            </div>
+            <div class="hero-info">
+                <h2 class="title">Nabin Poudel</h2>
+                <div class="hero-details">
+                    <h3 class="subtitle" id="subtitle"></h3>
+                    <p class="blink">|</p>
+                </div>
+            </div>
+            <div class="social">
+                <a href="https://www.linkedin.com/in/nabin-poudel-429b54243/"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://x.com/xjizy626?s=21"><i class="fa-brands fa-square-x-twitter"></i></a>
+                <a href="https://github.com/Nubpz"><i class="fab fa-github"></i></a>
+                <a href="https://www.instagram.com/nubpz/"><i class="fa-brands fa-square-instagram"></i></a>
+                <a href="https://mail.google.com/mail/u/0/#inbox?compose=CllgCJTLGShZNDZbmLCvBJfHnDTBGBjbNqgsWKtChVWqjPRVGpkfzXRGxcCTGqJnkszTNXHPRjB"><i class="fa-solid fa-envelope"></i></a>
+            </div>
+            <div class="links">
+                <a href="Nabin Poudel Resume.pdf">download cv</a>
+                <a href="#contact" data-menu="contact" id="contact-me">contact me</a>
+            </div>
+        </div>
+        <section class="about active" id="about">
+            <div class="about-me p-3">
+                <h3 class="specialtitle"></span> &lt;/ about <span>me</span> > </h3>
+                <div class="row">
+                    <div class="text">
+                        <p>
+                            I am Nabin Poudel, a Computer Science student at the University of Maryland, Baltimore County (UMBC). Passionate about coding and technology, I'm constantly exploring new ways to solve problems and create innovative solutions. My academic journey has equipped me with a strong foundation in principles of programming languages, algorithm & data structures, assembly languages and more.
+                        </p>
+                    </div>
+                    <div class="info">
+                        <ul>
+                            <li><strong>age . . . . .</strong> 26</li>
+                            <li><strong>residence . . . . .</strong> USA</li>
+                            <li><strong>freelance . . . . .</strong> available</li>
+                            <li><strong>address . . . . .</strong>Maryland, USA</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="services p-3">
+                <h3 class="specialtitle">&lt;/Ex<span>pertise</span> > </h3>
+                <div class="services-container">
+                    <div class="serv">
+                        <div class="icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h4>Web developement</h4>
+                        <p>Skilled in designing and developing responsive websites using HTML, CSS, JavaScript, and modern frameworks.</p>
+                    </div>
+                    <div class="serv">
+                        <div class="icon">
+                            <i class="fas fa-palette"></i>
+                        </div>
+                        <h4>Web design</h4>
+                        <p>Skilled in creating visually appealing, user-centric designs using design tools and principles to craft responsive layouts for an engaging user experience across all devices.</p>
+                    </div>
+                    <div class="serv">
+                        <div class="icon">
+                            <i class="fas fa-gamepad"></i>
+                        </div>
+                        <h4>App development</h4>
+                        <p>Proficient in developing responsive and user-friendly mobile and web apps with seamless functionality and intuitive user experiences.</p>
+                    </div>
+                    <div class="serv">
+                        <div class="icon">
+                            <i class="fa-solid fa-chalkboard-user"></i>
+                        </div>
+                        <h4>Tutoring</h4>
+                        <p>Proficient in C/C++, Java, Calculus, Calculus II, Linear Algebra, and Statistics, providing clear explanations and personalized guidance.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="resume" id="resume">
+            <div class="my-resume p-3">
+                <h3 class="specialtitle">&lt;/R<span>esume</span>> </h3>
+                <div class="row">
+                    <div class="experience">
+                        <div class="title">
+                            <i class="fas fa-briefcase"></i>
+                            <h4>experience</h4>
+                        </div>
+                        <div class="exp-box">
+                            <span>Freelance</span>
+                            <h4>Website Redesign and customization</h4>
+                            <h5><a href="http://www.mydiamondcity.com">AAA Diamond Inc.</a></h5>
+                            <p>Redesigned a WordPress jewelry store website, enhancing aesthetics and user engagement, and integrated third-party finance APIs for seamless transactions and diverse payment methods to improve conversion rates and customer satisfaction.</p>
+                        </div>
+                        <div class="exp-box">
+                            <span>Freelance</span>
+                            <h4>front-end developement</h4>
+                            <h5>Buddha LLC</h5>
+                            <p>
+                                Developed visually appealing and intuitive user interfaces for Buddha LLC using HTML, CSS, and JavaScript, employing responsive web design techniques to ensure optimal display across various devices and screen sizes.</p>
+                        </div>
+                        <div class="exp-box">
+                            <span>2022 - 2023</span>
+                            <h4>Automated Customer Data Management System</h4>
+                            <h5>AAA Dimaond Inc</h5>
+                            <p>Developed a web-based mobile application CDMS, automating repair tracking and customer updates, and engineered an automated workflow to seamlessly inform customers through email or text, enhancing communication efficiency.</p>
+                        </div>
+                    </div>
+                    <div class="education">
+                        <div class="title">
+                            <i class="fas fa-university"></i>
+                            <h4>education</h4>
+                        </div>
+                        <div class="edu-box">
+                            <span>2023 - Current</span>
+                            <h4>University of Maryland Baltimore County (UMBC)</h4>
+                            <h5>Catonsville, MD <br> Bachelor of Science, Computer Science <br> President's List | Dean's List </h5>
+                            <p>Explored diverse subjects such as Principles of Programming Languages, Data Structures, Assembly Languages and more, gaining practical experience with languages like C, C++, Python, Scheme, and others.</p>
+                        </div>
+                        <div class="edu-box">
+                            <span>2021 - 2023</span>
+                            <h4>Community College of Baltimore County (CCBC)</h4>
+                            <h5>Catonsville, MD <br> Associate Science, Computer Science <br>  3.96 GPA | Dean's List</h5>
+                            <p>Studied and applied foundational concepts in Linear Algebra, Discrete Mathematics, Calculus, and Statistics, gaining practical insights and problem-solving skills across  </p>
+                        </div>
+                        <div class="edu-box">
+                            <span>2012 - 2016</span>
+                            <h4>Everest English Boarding Higher Secondary School</h4>
+                            <h5>Butwal, Nepal</h5>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, expedita. </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="skills p-3">
+                <h3 class="specialtitle">&lt;/My<span>skills</span> > </h3>
+                <div class="row">
+                    <div class="skill-left">
+                        <div class="skill">
+                            <div class="title">
+                                <i class="fas fa-paint-brush"></i>
+                                <h4>design</h4>
+                            </div>
+                            <div class="skill-box">
+                                <h4>web design</h4>
+                                <div class="progress">
+                                    <span data-progress="80%"></span>
+                                </div>
+                            </div>
+                            <div class="skill-box">
+                                <h4>web developer</h4>
+                                <div class="progress">
+                                    <span data-progress="95%"></span>
+                                </div>
+                            </div>
+                            <div class="skill-box">
+                                <h4>Wordpress</h4>
+                                <div class="progress">
+                                    <span data-progress="70%"></span>
+                                </div>
+                            </div>
+                            <div class="skill-box">
+                                <h4>Figma</h4>
+                                <div class="progress">
+                                    <span data-progress="60%"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="coding">
+                            <div class="title">
+                                <i class="fas fa-code"></i>
+                                <h4>coding</h4>
+                            </div>
+                            <div class="coding-container">
+                                <div class="code">
+                                    <div class="progress">
+                                        <span class="progress-bar"></span>
+                                        <span class="num" data-num="90"></span>
+                                    </div>
+                                    <h5>C / C++</h5>
+                                </div>
+                                <div class="code">
+                                    <div class="progress">
+                                        <span class="progress-bar"></span>
+                                        <span class="num" data-num="85"></span>
+                                    </div>
+                                    <h5>HTML / CSS / JS</h5>
+                                </div>
+                                <div class="code">
+                                    <div class="progress">
+                                        <span class="progress-bar"></span>
+                                        <span class="num" data-num="70"></span>
+                                    </div>
+                                    <h5>JAVA</h5>
+                                </div>
+                                <div class="code">
+                                    <div class="progress">
+                                        <span class="progress-bar"></span>
+                                        <span class="num" data-num="65"></span>
+                                    </div>
+                                    <h5>Python</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill-right">
+                        <div class="languages">
+                            <div class="title">
+                                <i class="fas fa-flag"></i>
+                                <h4>languages</h4>
+                            </div>
+                            <div class="language">
+                                <h4>English</h4>
+                                <ul>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                </ul>
+                            </div>
+                            <div class="language">
+                                <h4>Nepali</h4>
+                                <ul>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                </ul>
+                            </div>
+                            <div class="language">
+                                <h4>Hindi</h4>
+                                <ul>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                </ul>
+                            </div>
+                            <div class="language">
+                                <h4>spanish</h4>
+                                <ul>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="knowledges">
+                            <div class="title">
+                                <i class="fas fa-list"></i>
+                                <h4>knowledge</h4>
+                            </div>
+                            <div class="knowledge-container">
+                                <div class="knowledge-box">
+                                    <i class="fas fa-check"></i>
+                                    <h4>Website hosting</h4>
+                                </div>
+                                <div class="knowledge-box">
+                                    <i class="fas fa-check"></i>
+                                    <h4>Git and github</h4>
+                                </div>
+                                <div class="knowledge-box">
+                                    <i class="fas fa-check"></i>
+                                    <h4>SEO optimization</h4>
+                                </div>
+                                <div class="knowledge-box">
+                                    <i class="fas fa-check"></i>
+                                    <h4>Sales and marketing</h4>
+                                </div>
+                                <div class="knowledge-box">
+                                    <i class="fas fa-check"></i>
+                                    <h4>Modern and mobile-ready</h4>
+                                </div>
+                                <div class="knowledge-box">
+                                    <i class="fas fa-check"></i>
+                                    <h4>Data Management</h4>
+                                </div>
+                                <div class="knowledge-box">
+                                    <i class="fas fa-check"></i>
+                                    <h4>Leadership and team work</h4>
+                                </div>
+                                <div class="knowledge-box">
+                                    <i class="fas fa-check"></i>
+                                    <h4>Create logo design</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="work" id="work">
+            <div class="my-work p-3">
+                <h3 class="specialtitle">&lt;/Recent<span>work</span>></h3>
+                <div class="work-container">
+                    <div class="box">
+                        <div class="box-img">
+                            <img src="img/work-1.jpg" alt="">
+                        </div>
+                        <div class="box-content">
+                            <style>
+                                a:hover h4 {
+                                    color: #000; /* Dark black color */
+                                    text-decoration: underline;
+                                }
+                            </style>
+                            <a href="https://github.com/Nubpz/String-Manipulation-using-C-and-x86-Assembly.git"><h4>Menu-Driven String Manipulation Program in Assembly <i class="fa-brands fa-square-github"></i></h4> </a>
+                            <p><span>Languages:</span> C, Intel x86 Assembly </p>
+                            <p style= "margin-top: 10px; text-align: justify;">Implementation of menu-driven program in C and X86_64 Assembly to manipulate strings, incorporating string operations, arithmetic, and subroutines, with support for storing and manipulating 10 messages.</p>
+                           
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="box-img">
+                            <img src="img/work-2.jpg" alt="">
+                        </div>
+                        <div class="box-content">
+                            <h4>Communication data management</h4>
+                            <p><span>Languages:</span> C++ (Queue, Linked List, Memory Management and more)</p>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="box-img">
+                            <img src="img/work-3.jpg" alt="">
+                        </div>
+                        <div class="box-content">
+                            <h4>lorem impsum dolor</h4>
+                            <p><span>Web Design</span> / 18 Sep. 2018</p>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="box-img">
+                            <img src="img/work-4.jpg" alt="">
+                        </div>
+                        <div class="box-content">
+                            <h4>lorem impsum dolor</h4>
+                            <p><span>Web Design</span> / 18 Sep. 2018</p>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="box-img">
+                            <img src="img/work-5.jpg" alt="">
+                        </div>
+                        <div class="box-content">
+                            <h4>lorem impsum dolor</h4>
+                            <p><span>Web Design</span> / 18 Sep. 2018</p>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="box-img">
+                            <img src="img/work-6.jpg" alt="">
+                        </div>
+                        <div class="box-content">
+                            <h4>lorem impsum dolor</h4>
+                            <p><span>Web Design</span> / 18 Sep. 2018</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="blog" id="blog">
+            <div class="my-blog p-3">
+                <h3 class="specialtitle">&lt;/bl<span>og</span>> </h3>
+                <div class="blog-container">
+                    <div class="box">
+                        <div class="box-img">
+                            <img src="img/blog1.jpeg" alt="">
+                        </div>
+                        <div class="box-desc">
+                            <span>may 28, 2024</span>
+                            <a href="blog1.html">How does AI work?</a>
+                            <p>AI learns from data to make decisions and predictions, mimicking human cognitive functions through algorithms and machine learning techniques.</p>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="box-img">
+                            <img src="img/blog2.jpeg" alt="">
+                        </div>
+                        <div class="box-desc">
+                            <span>Feb 24, 2024</span>
+                            <a href="blog2.html">Ethical Analysis of Smart Cities</a>
+                            <p>Smart city leverages cutting-edge technology to enhance urban infrastructure, improve public services, and promote sustainable development, ultimately aiming to enrich the quality of life for its residents.</p>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="box-img">
+                            <img src="img/blog3img.webp" alt="">
+                        </div>
+                        <div class="box-desc">
+                            <span>april 28, 2022</span>
+                            <a href="blog3.html">Technology in Education</a>
+                            <p>Technology in education revolutionizes learning by integrating digital tools and platforms to enhance engagement, accessibility, and personalized learning experiences for students.</p>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="box-img">
+                            <img src="img/blog1.jpg" alt="">
+                        </div>
+                        <div class="box-desc">
+                            <span>april 28, 2022</span>
+                            <a href="blog3.html">By spite about do of allow</a>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tenetur, voluptatem!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="contact" id="contact">
+            <div class="contact-me p-3">
+                <h3 class="specialtitle">&lt;/get<span>in touch</span>> </h3>
+                <div class="contact-container">
+                    <div class="map">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3978574.268270034!2d-77.26841719838716!3d38.96736021379332!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b7db041d9463f1%3A0x9b7a4b8909edb59e!2sMaryland!5e0!3m2!1sen!2sus!4v1661515186339!5m2!1sen!2sus
+                            "
+                            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                    <div class="info-list">
+                        <ul>
+                            <li><strong>address . . . . .</strong> Maryland USA</li>
+                            <li><strong>email . . . . .</strong>nhastly24@gmail.com</li>
+                            <li><strong>phone . . . . .</strong>+443 985 5717</li>
+                            <li><strong>freelance . . . . .</strong>available</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="form-title">
+                    <h3 class="specialtitle">&lt;/contact<span> form</span> > </h3>
+                </div>
+                 <div class="contact-form">
+                    <form action="https://api.web3forms.com/submit" method="POST">
+                        <input type="hidden" name="access_key" value="d9f38ed2-3fa0-47af-8334-5baf179e47be">
+                        <div class="form-group">
+                            <input type="text" name="name" required placeholder="Full Name">
+                        </div>
+                        <div class="form-group">
+                           <input type="email" name="email" required placeholder="Email"> 
+                        </div>
+                        <div class="form-group message">
+                           <textarea name="message" required placeholder="Message"></textarea>
+                        </div> 
+                        <div class="submit-wrapper">
+                            <button type="submit">Send Message <span class="rotate-icon"><i class="fa-regular fa-paper-plane"></i></span></button>
+                            <div class="loader"></div>
+                        </div>
+                    </form>
+                </div> 
+            </div>
+        </section>
+    </div>
+    <script src="https://kit.fontawesome.com/9e5ba2e3f5.js" crossorigin="anonymous"></script>
+    <script src="main.js"></script>
+    
+</body>
+
+</html>
+
+<script src="particles.js"></script>
+<script src="my.js"></script>
