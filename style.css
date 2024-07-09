@@ -973,6 +973,9 @@ header .top-menu ul li:hover a .link {
     text-transform: capitalize;
     margin-bottom: .5rem;
     font-weight: 600;
+    pointer-events: auto;
+    z-index: 10;
+    position: relative;
 }
 
 .work .my-work .work-container .box .box-content p {
@@ -1290,11 +1293,12 @@ header .top-menu ul li:hover a .link {
 }
 
 @media (max-width: 600px) {
-    .social, .box-desc a,   .map, .contact-form{
+    .social, .box-desc a,   .map, .contact-form, .avatar{
       pointer-events: auto;
       z-index: 10;
       position: relative;
     }
 }
+
 /* End Contact Section  */
 
