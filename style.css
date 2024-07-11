@@ -345,11 +345,13 @@ header .top-menu ul li:nth-child(5).active ~ .indicator{
     }
 
     header .top-menu ul li:first-of-type {
-        border-radius: .4rem .4rem 0 0;
+        border-radius: 20rem 20rem 0 0;
     }
 
     header .top-menu ul li:last-of-type {
-        border-radius: 0 0 .4rem .4rem;
+        border-radius: 0 0 20rem 20rem;
+        padding-bottom: 10px;
+
     }
 
     header .top-menu ul li:not(:first-of-type) a::before {
