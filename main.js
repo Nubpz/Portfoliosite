@@ -84,26 +84,16 @@ btns.forEach((btn) => {
         sections.forEach((sec) => {
             sec.classList.remove('active');
         });
-        document.querySelector('#' + current).classList.add('active');
+        document.querySelector('#'+current).classList.add('active');
+
+        document.querySelector('#'+current).scrollIntoView({
+            behavior: 'smooth'
+        });
     });
 });
 
-// //contact btn put active class for the contact li and the contact section
-// let contactMe = document.querySelector('#contact-me');
-
-// contactMe.addEventListener('click', () => {
-//     sections.forEach((section) => {
-//         section.classList.remove('active');
-//     });
-//     btns.forEach((btn) => {
-//         btn.classList.remove('active');
-//         document.querySelector('[data-menu~="contact"]').classList.add('active');
-//     });
-//     document.querySelector('#contact').classList.add('active');
-// });
-
 //ScrollSpy
-window.addEventListener('scroll', ScrollSpy);
+window.addEventListener('scroll', throttle(ScrollSpy, 100));
 
 function ScrollSpy() {
     let currentSection = '';
@@ -119,19 +109,13 @@ function ScrollSpy() {
             document.querySelector(`[data-menu~="${currentSection}"]`).classList.add('active');
         });
     }
+    function throttle(fn, wait) {
+        let time = Date.now();
+        return function() {
+            if ((time + wait - Date.now()) < 0) {
+                fn();
+                time = Date.now();
+            }
+        }
+    }
 }
-
-// window.addEventListener('load', function() {
-//     document.querySelector('.loader-wrapper').style.display = 'none';
-//     document.querySelector('.contact-me').style.display = 'block';
-//   });
-
-//   // Show submit loader on form submit
-//   document.getElementById('contact-form').addEventListener('submit', function(event) {
-//     var button = event.target.querySelector('button');
-//     var loader = event.target.querySelector('#submit-loader');
-    
-//     // Show loader and hide button
-//     loader.style.display = 'inline-block';
-//     button.style.display = 'none';
-//   });

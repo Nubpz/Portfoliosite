@@ -87,7 +87,7 @@ section {
     section.active {
         transform: translateX(0);
         visibility: visible;
-        opacity: 1;
+        opacity: 0.98;
     }
 }
 
@@ -245,7 +245,7 @@ header .top-menu ul {
 
 header .top-menu ul li {
     min-width: 20%;
-    background-color: var(--whiteColor);
+    background-color: white;
 }
 
 header .top-menu ul li a {
@@ -271,7 +271,7 @@ header .top-menu ul li a i {
     color: var(--blackColor);
     font-size: 2rem;
     line-height: 3rem;
-    transition: all .3s;
+    transition: 1s;
 }
 
 header .top-menu ul li a .link {
@@ -284,13 +284,50 @@ header .top-menu ul li a .link {
 }
 
 header .top-menu ul li.active a i,
-header .top-menu ul li.active a .link,
 header .top-menu ul li:hover a i,
-header .top-menu ul li:hover a .link {
+header .top-menu ul li.active a .link,
+header .top-menu ul li:hover a .link{
     color: var(--greenColor);
 }
 
-@media(min-width: 561px) {
+/*.indicator {
+    position: absolute;
+    left: -20%;
+    top: 1%; 
+    width: 60px;
+    height: 60px;
+    background-color: var(--greenColor);
+    border-radius: 50%;
+    border: 6px solid;
+}
+
+i{
+    z-index: 999;
+}
+
+header .top-menu ul li:nth-child(1).active ~ .indicator{
+    transform: translateY(calc(2rem * 0));
+    
+}
+
+header .top-menu ul li:nth-child(2).active ~ .indicator{
+    transform: translateY(calc(6.5rem * 1));
+   
+}
+
+header .top-menu ul li:nth-child(3).active ~ .indicator{
+    transform: translateY(calc(6.8rem * 2));
+}
+
+header .top-menu ul li:nth-child(4).active ~ .indicator{
+    transform: translateY(calc(6.8rem * 3));
+}
+
+header .top-menu ul li:nth-child(5).active ~ .indicator{
+    transform: translateY(calc(6.8rem * 4));
+} */
+
+@media(min-width: 600px) {
     header {
         width: 7.2rem;
         top: 2rem;
@@ -324,6 +361,53 @@ header .top-menu ul li:hover a .link {
     .hero {
         border-radius: 2%;
         padding: 0.5rem;
+    }
+
+    header .top-menu ul li.active a i,
+    header .top-menu ul li:hover a i
+    {  
+        transform: translateX(-20px); 
+        color: #d8dbe2;
+    }
+    
+    header .top-menu ul li.active a .link,
+    header .top-menu ul li:hover a .link{
+        color: white;
+    }
+
+    .indicator {
+        position: absolute;
+        left: -20%;
+        top: 1%; 
+        width: 60px;
+        height: 60px;
+        background-color: var(--greenColor);
+        border-radius: 50%;
+        border: 6px solid;
+    }
+
+    i{
+        z-index: 999;
+    }
+
+    header .top-menu ul li:nth-child(1).active ~ .indicator{
+        transform: translateY(calc(2rem * 0));
+    }
+
+    header .top-menu ul li:nth-child(2).active ~ .indicator{
+        transform: translateY(calc(6.5rem * 1));
+    }
+
+    header .top-menu ul li:nth-child(3).active ~ .indicator{
+        transform: translateY(calc(6.8rem * 2));
+    }
+
+    header .top-menu ul li:nth-child(4).active ~ .indicator{
+        transform: translateY(calc(6.8rem * 3));
+    }
+
+    header .top-menu ul li:nth-child(5).active ~ .indicator{
+        transform: translateY(calc(6.8rem * 4));
     }
 }
 
@@ -1299,6 +1383,3 @@ header .top-menu ul li:hover a .link {
       position: relative;
     }
 }
-
-/* End Contact Section  */
-
