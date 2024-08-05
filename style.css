@@ -237,6 +237,7 @@ header {
 
 header .top-menu {
     box-shadow: 0 .5rem 1rem rgba(0 0 0 / 5%);
+
 }
 
 header .top-menu ul {
@@ -264,7 +265,7 @@ header .top-menu ul li:not(:first-of-type) a::before {
     height: 100%;
     left: 0;
     top: 0;
-    background: radial-gradient(ellipse at top, #ddd 0, rgba(255, 255, 255, 0) 70%);
+    background: radial-gradient(ellipse at bottom, #ddd 0, rgba(255, 255, 255, 0) 70%);
 }
 
 header .top-menu ul li a i {
@@ -345,11 +346,11 @@ header .top-menu ul li:nth-child(5).active ~ .indicator{
     }
 
     header .top-menu ul li:first-of-type {
-        border-radius: 20rem 20rem 0 0;
+        border-radius: 1rem 1rem 0 0;
     }
 
     header .top-menu ul li:last-of-type {
-        border-radius: 0 0 20rem 20rem;
+        border-radius: 0 0 1rem 1rem;
         padding-bottom: 10px;
 
     }
@@ -480,6 +481,7 @@ header .top-menu ul li:nth-child(5).active ~ .indicator{
 
 .hero .social a:hover i {
     color: var(--greenColor);
+    transform: translateY(-5px);
 }
 
 
@@ -515,6 +517,7 @@ header .top-menu ul li:nth-child(5).active ~ .indicator{
 
 .hero .links a:hover {
     color: var(--greenColor);
+    transform: translateY(-5px);
 }
 
 .hero .links a:last-of-type::before {
@@ -1038,7 +1041,6 @@ header .top-menu ul li:nth-child(5).active ~ .indicator{
     height: 100%;
     inset: 0;
     z-index: 1;
-    background: linear-gradient(135deg, rgba(120, 204, 109, .5) 0, rgba(120, 204, 109, .1) 100%);
 }
 
 .work .my-work .work-container .box img {
@@ -1384,4 +1386,30 @@ header .top-menu ul li:nth-child(5).active ~ .indicator{
       z-index: 10;
       position: relative;
     }
+}
+
+/* Button Styles */
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 15px;
+    font-size: 10px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    color: #fff; /* White text color */
+    background-color: rgb(149, 33, 33); /* Dark background color */
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+}
+
+.button:hover {
+    background-color: #555; /* Slightly lighter dark color */
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+.button:active {
+    background-color: #111; /* Even darker background color */
+    transform: translateY(0);
 }
