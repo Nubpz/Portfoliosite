@@ -23,17 +23,13 @@ html {
     scroll-behavior: smooth;
 }
 
-/* body {
-    background: linear-gradient(90deg, rgba(0,0,0,1) 56%, rgba(168,1,1,1) 100%);
-    min-height: 90.6vh;
-    position: relative;
-} */
-
 body {
     background: linear-gradient(90deg, rgba(0,0,0,1) 56%, rgba(168,1,1,1) 100%);
-    min-height: 100vh; 
+    /* min-height: 90.6vh; */
+    height: 100%;
     position: relative;
-    font-size: 1.6rem; 
+    margin: 0;
+    padding: 0;
 }
 
 ul {
@@ -86,11 +82,18 @@ p {
         margin: 0 auto; 
         max-height: none; 
     }
+
+    body{
+        overflow: hidden;
+    }
 }
 
 @media (min-width: 1600px) {
     .container {
         max-width: 90%; 
+    }
+    body{
+        overflow: hidden;
     }
 }
 
