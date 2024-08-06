@@ -60,15 +60,14 @@ p {
     color: var(--textColor);
 }
 
-/* ADDED */
-/* .container {
+.container {
     margin: 0 auto;
     padding: 0 1.5rem;
     width: 100%;
     max-width: 120rem; 
     position: relative;
     z-index: 1;
-} */
+}
 
 @media(min-width: 768px) {
     .container {
@@ -78,27 +77,20 @@ p {
         position: relative;
         z-index: 1;
     }
-    /* .container {
-        padding: 0 3rem;
-    } */
 }
 
 @media(min-width: 1200px) {
-    /* .container {
-        max-width: 1286px;
-        max-height: 6740px;
-    } */
     .container {
-        max-width: 90%; /* Use a percentage instead of fixed pixel value */
-        width: 100%; /* Ensure it takes full width up to the max-width */
-        margin: 0 auto; /* Center the container */
-        max-height: none; /* Remove the fixed max-height */
+        max-width: 90%; 
+        width: 100%; 
+        margin: 0 auto; 
+        max-height: none; 
     }
 }
 
 @media (min-width: 1600px) {
     .container {
-        max-width: 100%; /* Set a larger max-width for very wide screens */
+        max-width: 90%; 
     }
 }
 
