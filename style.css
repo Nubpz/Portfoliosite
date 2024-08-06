@@ -98,7 +98,7 @@ p {
 
 @media (min-width: 1600px) {
     .container {
-        max-width: 90%; /* Set a larger max-width for very wide screens */
+        max-width: 100%; /* Set a larger max-width for very wide screens */
     }
 }
 
