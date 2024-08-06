@@ -31,9 +31,9 @@ html {
 
 body {
     background: linear-gradient(90deg, rgba(0,0,0,1) 56%, rgba(168,1,1,1) 100%);
-    min-height: 100vh; /* Changed from 90.6vh to 100vh */
+    min-height: 100vh; 
     position: relative;
-    font-size: 1.6rem; /* Base font size */
+    font-size: 1.6rem; 
 }
 
 ul {
