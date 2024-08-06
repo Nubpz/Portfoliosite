@@ -23,10 +23,17 @@ html {
     scroll-behavior: smooth;
 }
 
-body {
+/* body {
     background: linear-gradient(90deg, rgba(0,0,0,1) 56%, rgba(168,1,1,1) 100%);
     min-height: 90.6vh;
     position: relative;
+} */
+
+body {
+    background: linear-gradient(90deg, rgba(0,0,0,1) 56%, rgba(168,1,1,1) 100%);
+    min-height: 100vh; /* Changed from 90.6vh to 100vh */
+    position: relative;
+    font-size: 1.6rem; /* Base font size */
 }
 
 ul {
@@ -53,20 +60,45 @@ p {
     color: var(--textColor);
 }
 
-@media(min-width: 561px) {
+/* ADDED */
+/* .container {
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    width: 100%;
+    max-width: 120rem; 
+    position: relative;
+    z-index: 1;
+} */
+
+@media(min-width: 768px) {
     .container {
         margin: 0 auto;
         padding: 0 1.5rem 0 10rem;
-        max-width: 70rem;
+        max-width: 80rem;
         position: relative;
         z-index: 1;
     }
+    /* .container {
+        padding: 0 3rem;
+    } */
 }
 
 @media(min-width: 1200px) {
-    .container {
+    /* .container {
         max-width: 1286px;
         max-height: 6740px;
+    } */
+    .container {
+        max-width: 90%; /* Use a percentage instead of fixed pixel value */
+        width: 100%; /* Ensure it takes full width up to the max-width */
+        margin: 0 auto; /* Center the container */
+        max-height: none; /* Remove the fixed max-height */
+    }
+}
+
+@media (min-width: 1600px) {
+    .container {
+        max-width: 90%; /* Set a larger max-width for very wide screens */
     }
 }
 
@@ -148,7 +180,7 @@ strong {
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: rgba(0 0 0 / .5);
+    background-color: rgba(0, 0, 0, .5);
     border-radius: .6rem;
 }
 
@@ -290,7 +322,7 @@ header .top-menu ul li:hover a .link{
     color: var(--greenColor);
 }
 
-/*.indicator {
+.indicator {
     position: absolute;
     left: -20%;
     top: 1%; 
@@ -325,9 +357,9 @@ header .top-menu ul li:nth-child(4).active ~ .indicator{
 
 header .top-menu ul li:nth-child(5).active ~ .indicator{
     transform: translateY(calc(6.8rem * 4));
-} */
+}
 
-@media(min-width: 600px) {
+@media(min-width: 768px) {
     header {
         width: 7.2rem;
         top: 2rem;
