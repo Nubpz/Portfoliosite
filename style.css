@@ -73,12 +73,12 @@ p {
 }*/
 
 @media(min-width: 1200px) {
-    .container {
+    /* .container {
         max-width: 90%; 
         width: 100%; 
         margin: 0 auto; 
         max-height: none; 
-    }
+    } */
 
     body{
         overflow: hidden;
@@ -102,14 +102,14 @@ p {
     }
 }
 
-@media (min-width: 1600px) {
+/* @media (min-width: 1600px) {
     .container {
         max-width: 90%; 
     }
     body{
         overflow: hidden;
     }
-}
+} */
 
 section {
     margin-bottom: 1.5rem;
