@@ -26,10 +26,7 @@ html {
 body {
     background: linear-gradient(90deg, rgba(0,0,0,1) 56%, rgba(168,1,1,1) 100%);
     min-height: 90.6vh;
-    height: 100%;
     position: relative;
-    margin: 0;
-    padding: 0;
 }
 
 ul {
@@ -56,16 +53,16 @@ p {
     color: var(--textColor);
 }
 
-.container {
+/* .container {
     margin: 0 auto;
     padding: 0 1.5rem;
     width: 100%;
     max-width: 120rem; 
     position: relative;
     z-index: 1;
-}
+} */
 
-@media(min-width: 768px) {
+/* @media(min-width: 768px) {
     .container {
         margin: 0 auto;
         padding: 0 1.5rem 0 10rem;
@@ -73,19 +70,35 @@ p {
         position: relative;
         z-index: 1;
     }
-}
+}*/
 
 @media(min-width: 1200px) {
     .container {
         max-width: 90%; 
-        /* width: 100%;  */
+        width: 100%; 
         margin: 0 auto; 
-        max-height: auto; 
+        max-height: none; 
     }
 
     body{
         overflow: hidden;
-        display: flex;
+    }
+} 
+
+@media(min-width: 561px) {
+    .container {
+        margin: 0 auto;
+        padding: 0 1.5rem 0 10rem;
+        max-width: 70rem;
+        position: relative;
+        z-index: 1;
+    }
+}
+
+@media(min-width: 1200px) {
+    .container {
+        max-width: 1286px;
+        max-height: 674px;
     }
 }
 
@@ -95,7 +108,6 @@ p {
     }
     body{
         overflow: hidden;
-        display: flex;
     }
 }
 
@@ -116,7 +128,7 @@ section {
     section.active {
         transform: translateX(0);
         visibility: visible;
-        opacity: 0.98;
+        opacity: 1;
     }
 }
 
@@ -356,7 +368,7 @@ header .top-menu ul li:nth-child(5).active ~ .indicator{
     transform: translateY(calc(6.8rem * 4));
 }
 
-@media(min-width: 768px) {
+@media(min-width: 561px) {
     header {
         width: 7.2rem;
         top: 2rem;
@@ -399,7 +411,7 @@ header .top-menu ul li:nth-child(5).active ~ .indicator{
     {  
         transform: translateX(-20px); 
         color: #d8dbe2;
-    }
+    } 
     
     header .top-menu ul li.active a .link,
     header .top-menu ul li:hover a .link{
@@ -417,7 +429,7 @@ header .top-menu ul li:nth-child(5).active ~ .indicator{
         border: 6px solid;
     }
 
-    i{
+    /* i{
         z-index: 999;
     }
 
@@ -439,7 +451,7 @@ header .top-menu ul li:nth-child(5).active ~ .indicator{
 
     header .top-menu ul li:nth-child(5).active ~ .indicator{
         transform: translateY(calc(6.8rem * 4));
-    }
+    } */
 }
 
 /* End Header  */
@@ -577,11 +589,7 @@ header .top-menu ul li:nth-child(5).active ~ .indicator{
     }
 }
 
-@media(min-width: 200px) {
-    .hero {
-        padding-top: 1rem;
-    }
-}
+
 
 /* End Hero Section  */
 /* Start About Section  */
@@ -1387,7 +1395,7 @@ header .top-menu ul li:nth-child(5).active ~ .indicator{
 @media (max-width: 600px) {
     .social, .box-desc a,   .map, .contact-form, .avatar{
       pointer-events: auto;
-      z-index: 10;
+      z-index: 1;
       position: relative;
     }
 }
