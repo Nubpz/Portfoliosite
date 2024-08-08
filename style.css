@@ -1379,7 +1379,7 @@ header .top-menu ul li:nth-child(5).active ~ .indicator{
     position: relative;
 }
 
-.title1 i {
+.knowledge-box-side i {
     font-size: 24px;
     margin-right: 10px;
     color: var(--greenColor);
@@ -1429,7 +1429,7 @@ header .top-menu ul li:nth-child(5).active ~ .indicator{
     transform: rotateY(180deg);
 }
 
-.knowledge-box:hover .title1 i {
+.knowledge-box:hover .knowledge-box-side i {
     opacity: 0;
 }
 
