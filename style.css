@@ -53,33 +53,7 @@ p {
     color: var(--textColor);
 }
 
-/* .container {
-    margin: 0 auto;
-    padding: 0 1.5rem;
-    width: 100%;
-    max-width: 120rem; 
-    position: relative;
-    z-index: 1;
-} */
-
-/* @media(min-width: 768px) {
-    .container {
-        margin: 0 auto;
-        padding: 0 1.5rem 0 10rem;
-        max-width: 80rem;
-        position: relative;
-        z-index: 1;
-    }
-}*/
-
 @media(min-width: 1200px) {
-    /* .container {
-        max-width: 90%; 
-        width: 100%; 
-        margin: 0 auto; 
-        max-height: none; 
-    } */
-
     body{
         overflow: hidden;
     }
@@ -101,15 +75,6 @@ p {
         max-height: 674px;
     }
 }
-
-/* @media (min-width: 1600px) {
-    .container {
-        max-width: 90%; 
-    }
-    body{
-        overflow: hidden;
-    }
-} */
 
 section {
     margin-bottom: 1.5rem;
@@ -343,7 +308,7 @@ header .top-menu ul li:hover a .link{
 }
 
 i{
-    z-index: 999;
+    z-index: 1;
 }
 
 header .top-menu ul li:nth-child(1).active ~ .indicator{
@@ -428,30 +393,6 @@ header .top-menu ul li:nth-child(5).active ~ .indicator{
         border-radius: 50%;
         border: 6px solid;
     }
-
-    /* i{
-        z-index: 999;
-    }
-
-    header .top-menu ul li:nth-child(1).active ~ .indicator{
-        transform: translateY(calc(2rem * 0));
-    }
-
-    header .top-menu ul li:nth-child(2).active ~ .indicator{
-        transform: translateY(calc(6.5rem * 1));
-    }
-
-    header .top-menu ul li:nth-child(3).active ~ .indicator{
-        transform: translateY(calc(6.8rem * 2));
-    }
-
-    header .top-menu ul li:nth-child(4).active ~ .indicator{
-        transform: translateY(calc(6.8rem * 3));
-    }
-
-    header .top-menu ul li:nth-child(5).active ~ .indicator{
-        transform: translateY(calc(6.8rem * 4));
-    } */
 }
 
 /* End Header  */
@@ -1442,6 +1383,7 @@ header .top-menu ul li:nth-child(5).active ~ .indicator{
     font-size: 24px;
     margin-right: 10px;
     color: var(--greenColor);
+    transition: opacity 0.3s;
 }
 
 .title1 h4 {
@@ -1485,6 +1427,10 @@ header .top-menu ul li:nth-child(5).active ~ .indicator{
 
 .knowledge-box:hover .knowledge-box-inner {
     transform: rotateY(180deg);
+}
+
+.knowledge-box:hover .title1 i {
+    opacity: 0;
 }
 
 .knowledge-box-side {
